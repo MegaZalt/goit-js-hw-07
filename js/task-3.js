@@ -5,5 +5,3 @@ nameInput.addEventListener('input', function () {
     const trimedName = this.value.trim();
     nameOutput.textContent = trimedName || 'Anonymous';
 });
-
-});
