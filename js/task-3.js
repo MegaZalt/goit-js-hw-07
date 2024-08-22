@@ -6,3 +6,4 @@ nameInput.addEventListener('input', function () {
     nameOutput.textContent = trimedName || 'Anonymous';
 });
 
+});
