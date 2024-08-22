@@ -2,8 +2,8 @@ window.onload = () => {
 
   const controls = document.querySelector('#controls');
   const input = document.querySelector('#number');
-  const buttonDestroy = document.querySelector('#destroy-button');
-  const buttonCreate = document.querySelector('#create-button');
+  const buttonDestroy = document.querySelector('[data-destroy]');
+  const buttonCreate = document.querySelector('[data-create]');
   const boxContainer = document.querySelector('#boxes');
 
 
