@@ -22,5 +22,42 @@ const images = [
   {
     url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
     alt: "Lighthouse Coast Sea",
-  }
+  },
 ];
+
+const gallery = document.querySelector("#gallery");
+
+if (gallery) {
+  images.forEach((imgage) => {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    img.src = image.url;
+    img.alt = image.alt;
+
+    li.appendChild(img);
+    gallery.appendChild(li);
+  });
+} else {
+  console.log();
+}
+
+const style = document.createElement("style");
+style.textContent = `
+.gallery {
+ display: flex;
+ padding: 0;
+ margin: 0;
+ list-style-type: none;
+ flex-wrap: wrap;
+ }
+
+ .gallery li {
+ box-sizing: border-box;
+ }
+
+ .gallery img {
+ width: 100%;
+ hight: auto;
+ display: block;
+ }
+ `;
