@@ -25,9 +25,10 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector("#gallery");
+const gallery = document.querySelector(".gallery");
 
 if (gallery) {
+  const fragment = document.createDocumentFragment();
   images.forEach((imgage) => {
     const li = document.createElement("li");
     const img = document.createElement("img");
@@ -35,8 +36,11 @@ if (gallery) {
     img.alt = image.alt;
 
     li.appendChild(img);
-    gallery.appendChild(li);
+    fragment.document(li);
   });
+
+  gallery.appendChild(fragment);
+
 } else {
   console.log();
 }
@@ -57,7 +61,7 @@ style.textContent = `
 
  .gallery img {
  width: 100%;
- hight: auto;
+ height: auto;
  display: block;
  }
  `;
