@@ -8,7 +8,7 @@ window.onload = () => {
         event.preventDefault();
         const form = event.target;
         const login = form.elements.login.value.trim();
-        const password = form.elements.login.value.trim();
+        const password = form.elements.password.value.trim();
 
         if (!login || !password) {
             alert('All form fields must be filled in');
