@@ -17,6 +17,7 @@ window.onload = () => {
   function createBoxes(amount) {
     boxContainer.innerHTML = "";
 
+    const fragment = document.createDocumentFragment();
     let boxSize = 30;
 
     for (let i = 0; i < amount; i++) {
@@ -25,9 +26,11 @@ window.onload = () => {
       box.style.height = `${boxSize}px`;
       box.style.backgroundColor = getRandomHexColor();
 
-      boxContainer.appendChild(box);
+      fragment.appendChild(box);
       boxSize += 10;
     }
+
+    boxContainer.appendChild(fragment);
   }
 
   function destroyBoxes() {
