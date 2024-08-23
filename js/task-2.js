@@ -29,14 +29,14 @@ const gallery = document.querySelector(".gallery");
 
 if (gallery) {
   const fragment = document.createDocumentFragment();
-  images.forEach((imgage) => {
+  images.forEach((image) => {
     const li = document.createElement("li");
     const img = document.createElement("img");
     img.src = image.url;
     img.alt = image.alt;
 
     li.appendChild(img);
-    fragment.document(li);
+    fragment.appendChild(li);
   });
 
   gallery.appendChild(fragment);
@@ -51,17 +51,19 @@ style.textContent = `
  display: flex;
  padding: 0;
  margin: 0;
- list-style-type: none;
  flex-wrap: wrap;
+ list-style-type: none;
  }
 
  .gallery li {
  box-sizing: border-box;
+ padding: 10px;
  }
 
  .gallery img {
  width: 100%;
  height: auto;
  display: block;
+ border-radius: 10px;
  }
  `;

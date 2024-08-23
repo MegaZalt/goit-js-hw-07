@@ -12,3 +12,26 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+.gallery {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+  /* Убираем маркеры списка у ul */
+}
+
+.gallery li {
+  box-sizing: border-box;
+  padding: 10px;
+  list-style-type: none;
+  /* Убираем маркеры списка у li */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
